@@ -1,0 +1,13 @@
+<mat-card>
+  <form [formGroup]="form" (ngSubmit)="onsearchCity.emit(form.value.city)">
+    <mat-form-field appearance="fill">
+      <mat-label>City</mat-label>
+      <mat-select formControlName="city">
+        <mat-option *ngFor="let city of citiesToSelect" [value]="city">
+          {{city}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-button type="submit">Search</button>
+  </form>
+</mat-card>

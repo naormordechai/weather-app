@@ -1,0 +1,11 @@
+<mat-card *ngIf="cities.length > 0">
+  <h2>Weather in:</h2>
+  <ol>
+    <ng-container *ngFor="let city of cities">
+      <app-weather-row [city]="city"></app-weather-row>
+    </ng-container>
+  </ol>
+</mat-card>
+
+
+<mat-spinner *ngIf="isLoading"></mat-spinner>
